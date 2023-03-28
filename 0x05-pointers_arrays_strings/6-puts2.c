@@ -1,4 +1,4 @@
-#include "msain.h"
+#include "main.h"
 /**
  * puts2 - functions shpuld print only the character out of two
  * starting with the first one
