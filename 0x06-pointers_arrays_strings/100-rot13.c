@@ -4,53 +4,42 @@
 
 
 /**
-
  * rot13 - encoder rot13
-
  * @s: pointer to string params
-
- *
-
- * return: *s
-
+ * Return: *s
  */
 
 
 char *rot13(char *s)
 
 {
+	int i;
+	int j;
+	char data1[] = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "nopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklm";
 
-        int i;
+	for (i = 0; s[i] != '\0'; i++)
 
-        int j;
+	{
 
-        char data1[] = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+	for (j = 0; j < 52; j++)
 
-        char datarot[] = "nopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklm";
+	{
 
+	if (s[i] == data1[j])
 
-        for (i = 0; s[i] != '\0'; i++)
+	{
 
-        {
+	s[i] = datarot[j];
 
-                for (j = 0; j < 52; j++)
+	break;
 
-                {
+	}
 
-                        if (s[i] == data1[j])
+	}
 
-                        {
+	}
 
-                                s[i] = datarot[j];
-
-                                break;
-
-                        }
-
-                }
-
-        }
-
-        return (s);
+	return (s);
 
 }
