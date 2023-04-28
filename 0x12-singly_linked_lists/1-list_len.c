@@ -5,6 +5,8 @@
  * @h: pointer to the start of the linked list
  *
  * Return: number of elements in the linked list
+ * Author - Gloria Agiamah
+ * Date - 28-04-23
  */
 size_t list_len(const list_t *h)
 {
